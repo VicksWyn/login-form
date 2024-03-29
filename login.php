@@ -1,9 +1,9 @@
 <?php
 // Configure connection details (replace with your own)
 $servername = "localhost";
-$username = "root"; // removed "@localhost" from username
-$password = "your_password";
-$dbname = "trial3";
+$username = "kaloki"; // removed "@localhost" from username
+$password = "kaloki";
+$dbname = "victor";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname); // corrected variables
@@ -17,8 +17,9 @@ if (!$conn) {
 $name = $_POST['username'];
 $email = $_POST['password'];
 
+
+$sql = "SELECT * FROM login WHERE username = ? AND password = ?";
 // Prepare SQL statement (prevent SQL injection)
-$sql = "INSERT INTO Regist1(username,password) VALUES (?, ?)";
 $stmt = mysqli_prepare($conn, $sql);
 
 // Bind parameters (improves security)

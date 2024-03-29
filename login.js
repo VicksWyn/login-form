@@ -9,7 +9,7 @@ loginForm.addEventListener('submit', (event) => {
   // Send data to server-side script (login.php) using AJAX or fetch API
   // Here's an example using fetch:
 
-  fetch('Regist1.php', {
+  fetch('login.php', {
     method: 'POST',
     body: new FormData(loginForm) // Send form data as FormData
   })
